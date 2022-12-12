@@ -1,0 +1,75 @@
+//Coding: sass by javascript runtime.
+//Do not import this file into html,U need to compile first.
+
+/*
+===========================
+Color Settings.
+===========================
+*/
+$clr-black:#333333;//This color is not pure black.
+$clr-black-pure:#000000;
+$clr-gray:#c6c6c6;
+$clr-white:#fffef5;//This color is mixed with yellow.
+$clr-white-pure:#ffffff;
+$clr-green: #37DB89;
+$clr-blue: #3789DB;
+$clr-red: #DB3737;
+/*
+==========================
+Basic Settings
+==========================
+*/
+//Radius.
+//It can be used in border radius.
+$radius-block: 10px;
+$radius-special: 1% 15%;
+$radius-button: 50px;
+//Width and Height.
+$width-maximum: 1170px;
+$width-view-max: 80vw;
+$width-percentage-max: 100%;
+$height-maximum: 1170px;
+$height-large: 30rem;
+$height: 10rem;
+$height-small: 4rem;
+//Screen Size.
+$width-screen: 768px, 992px, 1170px;
+// Code Tests.
+@mixin close{
+    display: none;
+}
+@mixin line {
+    border: 1px solid $clr-black ;
+}
+/*
+==========================
+Mixins
+==========================
+*/
+// Using Mixins to setup RWD.
+@mixin desktop{
+    @media (min-width:1170){
+        @content;
+    }
+}
+@mixin pad{
+    @media (min-width:768px){
+        @content;
+    }
+}
+@mixin mobile{
+    @media (max-width:767px){
+        @content;
+    }
+}
+// To configure the content.
+@mixin fixed($top:0,$left:0,$right:0,$bottom:0,$zIndex:2) {
+    position: fixed;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+    z-index: $zIndex;
+    // width: 100%;
+    // height: $height-small;
+}

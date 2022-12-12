@@ -1,0 +1,92 @@
+//Coding: sass at javascript runtime.
+//Do not include this file directly in html file.
+/*
+Variables Defined in this file will need to follow the rules.
+=> Parts-things-notes.
+Ex: clr-black-pure.   Means pure black.
+----------------------------------------
+Class Definition:
+First words in lower case,and others will be upper case.
+Ex: navBar.         Means navigation bar.
+*/
+@import '_global.scss';
+// Navigation bar.
+body {
+    background-color: $clr-white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.navbar {
+    // @include close;
+    @include line;
+    display: flex;
+    justify-content: center;
+    height: $height-small;
+    background-color: $clr-blue;
+    @include fixed($zIndex:5);
+    .navbarCenter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navHeader {
+        margin: 15px 0 15px 0;
+        display: flex;
+        justify-content: center;
+        .navLogo {
+            background-image: url(../Image/school60.png);
+            height: 60px;
+            width: 60px;
+            object-fit: cover;
+        }
+        .navTitleDecorate {
+            font-size: 28px;
+            color: $clr-red;
+            font-weight: 700;
+            .navTitle {
+                color: $clr-white;
+            }
+        }
+    }
+    .navLeft {
+
+    }
+    .navRight {
+
+    }
+}
+.navFix {
+        @include fixed($zIndex:5);
+    }
+// Menu Content.
+.menu {
+    @include close;
+    .menuCenter {
+        .Learn {
+
+        }
+        .Life {
+
+        }
+    }
+}
+// Main Page Content.
+.mainPage {
+    @include close;
+    .tamkangNews {
+        img {
+
+        }
+    }
+    .shortCuts {
+        .shortCutCenter {
+
+        }
+        .shortCutLeft {
+
+        }
+        .shortCutRight {
+
+        }
+    }
+}
